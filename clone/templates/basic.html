@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  
+ <title>DALL·E</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header class="navbarr">
+        <!-- Logo -->
+        <div class="logo">
+            <a href="/">
+                <img src="{% static 'images/logo.png' %}" class="pic" alt="Logo"> 
+            </a>
+          <h4 id="title">DALL·E</h4>
+        </div>
+    
+        <!-- Menu Options -->
+        <nav class="options">
+          <ul>
+            <li><a href="#">History</a></li>
+            <li><a href="#">Collections</a></li>
+            
+          </ul>
+        </nav>
+    
+        <!-- User Icon -->
+        <div class="user-icon" onclick="toggleDropdown()">
+            <img src="{% static 'images/profile.jpg' %}" alt="User Icon">
+            <div class="dropdown-content" id="dropdown">
+            <div class="dropdown-header">
+                <a href="/profile/">
+                <h4 style="color:black;">Umair Sabir</h4>
+                <p>umairsabirjutt@gmail.com</p>
+                </a>
+                <div class="dropdown-header-details">
+                    <div>
+                        <div class="cred-icon">
+    
+                            <svg xmlns="http://www.w3.org/2000/svg"  width="24" height="14" viewBox="0 0 24 24"><path fill="#FFFF67" d="M9.333 14.667h5.333V20H9.333z"></path><path fill="#A665F5" d="M4 4h5.333v5.333H4z"></path><path fill="#000" d="M14.667 9.333H20v5.333h-5.333z"></path><path fill="#42FEFF" d="M4 9.333h5.333v5.333H4z"></path><path fill="#51DA4C" d="M9.334 9.333h5.333v5.333H9.334z"></path><path fill="#AC7558" d="M4 14.667h5.333V20H4z"></path><path fill="#FF6E3D" d="M14.667 4H20v5.333h-5.333z"></path><path fill="#EB55F7" d="M14.667 14.667H20V20h-5.333z"></path><path fill="#3C46FF" d="M9.334 4h5.333v5.333H9.334z"></path></svg>
+                        </div>
+                        <div class="credit">4</div>
+                    </div>
+                    <div>
+                        <button class="surprise-btn">Buy Credit</button>
+                    </div>
+                </div>
+                
+            </div>
+            
+            
+            
+           
+            
+              <a href="#">
+                Read the announcement
+              </a>
+              <a href="#">Join the OpenAI Discord</a>
+              <a href="#">Visit the OpenAI platform</a>
+              <a href="#">Help</a>
+              <a href="/login/">Sign out</a>
+              <div class="dropdown-content-footer">
+                 
+                <a href="#">Content</a>
+                <a href="#">PolicyTerms</a>
+                <a href="#">About</a>
+              </div>
+            </div>
+          </div>
+          
+      </header>
+    {% block content %}
+    
+    {% endblock content %}
+    <div class="modal-container" id="modal">
+        <div class="modal-content">
+          <h2>Buy credits</h2>
+          <div class="inner-container">
+    
+            <p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" class="select-quantity-modal-centered"><g clip-path="url(#a)"><rect x="2" y="6" width="54" height="54" rx="27" fill="#000"></rect><path fill="#A665F5" d="M-1.25 50h5.333v5.333H-1.25z"></path><path fill="#000" d="M9.416 55.333h5.333v5.333H9.416z"></path><path fill="#42FEFF" d="M-1.25 55.333h5.333v5.333H-1.25z"></path><path fill="#51DA4C" d="M4.084 55.333h5.333v5.333H4.084z"></path><path fill="#FF6E3D" d="M9.416 50h5.333v5.333H9.416z"></path><path fill="#3C46FF" d="M4.084 50h5.333v5.333H4.084z"></path><path fill="#FFFF67" d="M12.084 44.667h5.333V50h-5.333z"></path><path fill="#A665F5" d="M6.75 34h5.333v5.333H6.75z"></path><path fill="#000" d="M17.416 39.333h5.333v5.333h-5.333z"></path><path fill="#42FEFF" d="M6.75 39.333h5.333v5.333H6.75z"></path><path fill="#51DA4C" d="M12.084 39.333h5.333v5.333h-5.333z"></path><path fill="#AC7558" d="M6.75 44.667h5.333V50H6.75z"></path><path fill="#FF6E3D" d="M17.416 34h5.333v5.333h-5.333z"></path><path fill="#EB55F7" d="M17.416 44.667h5.333V50h-5.333z"></path><path fill="#3C46FF" d="M12.084 34h5.333v5.333h-5.333z"></path><path fill="#FFFF67" d="M20.084 28.667h5.333V34h-5.333z"></path><path fill="#A665F5" d="M14.75 18h5.333v5.333H14.75z"></path><path fill="#000" d="M25.416 23.333h5.333v5.333h-5.333z"></path><path fill="#42FEFF" d="M14.75 23.333h5.333v5.333H14.75z"></path><path fill="#51DA4C" d="M20.084 23.333h5.333v5.333h-5.333z"></path><path fill="#AC7558" d="M14.75 28.667h5.333V34H14.75z"></path><path fill="#FF6E3D" d="M25.416 18h5.333v5.333h-5.333z"></path><path fill="#EB55F7" d="M25.416 28.667h5.333V34h-5.333z"></path><path fill="#3C46FF" d="M20.084 18h5.333v5.333h-5.333z"></path><path fill="#A665F5" d="M14.75 50h5.333v5.333H14.75z"></path><path fill="#000" d="M25.416 55.333h5.333v5.333h-5.333z"></path><path fill="#42FEFF" d="M14.75 55.333h5.333v5.333H14.75z"></path><path fill="#51DA4C" d="M20.084 55.333h5.333v5.333h-5.333z"></path><path fill="#FF6E3D" d="M25.416 50h5.333v5.333h-5.333z"></path><path fill="#3C46FF" d="M20.084 50h5.333v5.333h-5.333z"></path><path fill="#FFFF67" d="M28.084 44.667h5.333V50h-5.333z"></path><path fill="#A665F5" d="M22.75 34h5.333v5.333H22.75z"></path><path fill="#000" d="M33.416 39.333h5.333v5.333h-5.333z"></path><path fill="#42FEFF" d="M22.75 39.333h5.333v5.333H22.75z"></path><path fill="#51DA4C" d="M28.084 39.333h5.333v5.333h-5.333z"></path><path fill="#AC7558" d="M22.75 44.667h5.333V50H22.75z"></path><path fill="#FF6E3D" d="M33.416 34h5.333v5.333h-5.333z"></path><path fill="#EB55F7" d="M33.416 44.667h5.333V50h-5.333z"></path><path fill="#3C46FF" d="M28.084 34h5.333v5.333h-5.333z"></path><path fill="#A665F5" d="M30.75 50h5.333v5.333H30.75z"></path><path fill="#000" d="M41.416 55.333h5.333v5.333h-5.333z"></path><path fill="#42FEFF" d="M30.75 55.333h5.333v5.333H30.75z"></path><path fill="#51DA4C" d="M36.084 55.333h5.333v5.333h-5.333z"></path><path fill="#FF6E3D" d="M41.416 50h5.333v5.333h-5.333z"></path><path fill="#3C46FF" d="M36.084 50h5.333v5.333h-5.333z"></path></g><path fill="#FFFF67" d="M47.334 10.667h5.333V16h-5.333z"></path><path fill="#A665F5" d="M42 0h5.333v5.333H42z"></path><path fill="#000" d="M52.666 5.333h5.333v5.333h-5.333z"></path><path fill="#42FEFF" d="M42 5.333h5.333v5.333H42z"></path><path fill="#51DA4C" d="M47.334 5.333h5.333v5.333h-5.333z"></path><path fill="#AC7558" d="M42 10.667h5.333V16H42z"></path><path fill="#FF6E3D" d="M52.666 0h5.333v5.333h-5.333z"></path><path fill="#EB55F7" d="M52.666 10.667h5.333V16h-5.333z"></path><path fill="#3C46FF" d="M47.334 0h5.333v5.333h-5.333z"></path><defs><clipPath id="a"><rect x="2" y="6" width="54" height="54" rx="27" fill="#fff"></rect></clipPath></defs></svg>
+              <h4>115 credits</h4>
+              <p>
+                $15 Dollar
+              </p>
+              <div class="num-inc-input"><button tabindex="0" class="btn btn-icon btn-minimal btn-primary" type="button" aria-label="Decrement"><span class="btn-label-wrap"><span class="btn-label-inner"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" size="20" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><line x1="5" y1="12" x2="19" y2="12"></line></svg>&zwj;</span></span></button><input type="text" class="text-input text-input-medium text-input-outlined" inputmode="numeric" value="5"><button tabindex="0" class="btn btn-icon btn-minimal btn-primary" type="button" aria-label="Increment"><span class="btn-label-wrap"><span class="btn-label-inner"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" size="20" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>&zwj;</span></span></button></div>
+            </p>
+            <div class="modal-button">
+              <button id="close-modal">Close</button>
+              <button id="continue-modal">
+                Continue
+              </button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+
+      {% comment %} ....dropdown... {% endcomment %}
+      
+    <script src="{% static 'js/script.js' %}"></script>
+    <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"
+    ></script>
+</body>
+</html>
